@@ -21,7 +21,6 @@ export default function HeroCard({ hero, onToggle }: HeroCardProps) {
         color: hero.available ? "green" : "red",
         cursor: "pointer",
         listStyle: "none",
-        display: "inline-block",
         marginRight: "20px",
       }}
     >

@@ -10,7 +10,11 @@ export default function HeroesList() {
   return (
     <>
       <h2>Heroes</h2>
-      <ul style={{ display: 'flex', flexWrap: 'wrap', gap: '20px' }}>
+      <ul style={{
+    display: 'grid',
+    gridTemplateColumns: 'repeat(3, 1fr)',
+    gap: '2rem',
+  }}>
         {heroes.map((hero) => (
           <HeroCard key={hero.id} hero={hero} onToggle={toggleAvailability} />
         ))}
