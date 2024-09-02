@@ -20,8 +20,7 @@ export default function HeroCard({ hero, onToggle }: HeroCardProps) {
       style={{
         color: hero.available ? "green" : "red",
         cursor: "pointer",
-        listStyle: "none",
-        marginRight: "20px",
+        listStyle: "none"
       }}
     >
       {hero.id}. {hero.name} {hero.available ? '"Available"' : ""}
