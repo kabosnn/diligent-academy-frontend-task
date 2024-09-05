@@ -1,13 +1,13 @@
-interface Hero {
-  id: number;
-  name: string;
-  available: boolean;
-}
-
-interface HeroCardProps {
-  hero: Hero;
-  onToggle: (id: number) => void;
-}
+type Hero = {
+    id: number;
+    name: string;
+    available: boolean;
+  };
+  
+  type HeroCardProps = {
+    hero: Hero;
+    onToggle: (id: number) => void;
+  };
 
 export default function HeroCard({ hero, onToggle }: HeroCardProps) {
   const handleClick = () => {
@@ -15,7 +15,7 @@ export default function HeroCard({ hero, onToggle }: HeroCardProps) {
   };
 
   return (
-    <li
+    <div
       onClick={handleClick}
       style={{
         color: hero.available ? "green" : "red",
@@ -24,7 +24,7 @@ export default function HeroCard({ hero, onToggle }: HeroCardProps) {
       }}
     >
       {hero.id}. {hero.name} {hero.available ? '"Available"' : ""}
-    </li>
+    </div>
   );
 }
 
