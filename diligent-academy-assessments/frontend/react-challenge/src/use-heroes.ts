@@ -1,11 +1,6 @@
 import { useEffect, useState } from "react";
 import { callApi } from "./call-api";
-
-interface Hero {
-  id: number;
-  name: string;
-  available: boolean;
-}
+import { Hero } from "./types";
 
 export const useHeroes = () => {
   const [heroes, setHeroes] = useState<Hero[]>([]);
