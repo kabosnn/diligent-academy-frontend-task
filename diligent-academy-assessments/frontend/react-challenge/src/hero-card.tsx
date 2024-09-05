@@ -1,13 +1,4 @@
-type Hero = {
-    id: number;
-    name: string;
-    available: boolean;
-  };
-  
-  type HeroCardProps = {
-    hero: Hero;
-    onToggle: (id: number) => void;
-  };
+import { HeroCardProps } from "./types";
 
 export default function HeroCard({ hero, onToggle }: HeroCardProps) {
   const handleClick = () => {
