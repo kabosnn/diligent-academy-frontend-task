@@ -10,7 +10,7 @@ export default function HeroesList() {
   return (
     <>
       <h2>Heroes</h2>
-      <ul style={{
+      <div style={{
     display: 'grid',
     gridTemplateColumns: 'repeat(3, 1fr)',
     gap: '2rem',
@@ -18,7 +18,7 @@ export default function HeroesList() {
         {heroes.map((hero) => (
           <HeroCard key={hero.id} hero={hero} onToggle={toggleAvailability} />
         ))}
-      </ul>
+      </div>
     </>
   );
 }
